@@ -1,2 +1,2 @@
-# tarot solitaire
-A web solitaire game
+# mystical solitaire
+A mystic web solitaire game
