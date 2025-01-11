@@ -6,6 +6,7 @@ https://www.google.com/logos/fnbx/solitaire/standalone.html
 rules/inspo: 
   - https://jackofwandstarot.wordpress.com/2017/06/30/playing-tarot-solitaire/
   - https://youtu.be/LYmK23QAFZg
+  - https://codepen.io/bfa/pen/ggGYeE
 
 
 clubs = wands (clubs, staves) = fire (passion, creativity) = masculine = aries, leo, sagittarius
