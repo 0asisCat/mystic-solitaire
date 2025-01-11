@@ -20,5 +20,40 @@ Gray empty Card / black border
     margin:0;
     padding:0;
     box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.navBar{
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.score-board{
+    display:flex;
+    padding: 10px;
+    justify-content: space-evenly;
+    font-size: 1.2rem;
+}
+
+.card-list{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.card-organized{
+    display: flex;
+    justify-content: space-evenly;
+    justify-content: space-evenly;
+}
+
+.card-border{border:1px solid black;}
+
+img, .card-border{
+    width:162px;
+    height:289px;
+}
