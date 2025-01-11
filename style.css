@@ -1,5 +1,24 @@
 /* DESIGN IDEA
 Name: Mystic Solitaire;
-Color: black, white, purple, red
+Color: black, white
 Theme: Minimalistic, ascii art
+
+Dark header
+White background
+Gray empty Card / black border
 */
+
+:root{
+    --main-bg-color: #1c1c1c;
+    --main-text-color: #fff;
+    --main-border-color: #000;
+    --main-card-color: #808080;
+    --main-card-border-color: #000;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
