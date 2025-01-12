@@ -51,9 +51,9 @@ Gray empty Card / black border
     justify-content: space-evenly;
 }
 
-.card-border{border:1px solid black;}
+.card-border, .card-unfold{border:1px solid black;}
 
-img, .card-border{
+img, .card-border, .card-unfold{
     width:162px;
     height:289px;
 }
