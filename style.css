@@ -33,9 +33,9 @@ Gray empty Card / black border
 
 .score-board{
     display:flex;
-    padding: 10px;
+    padding: 2%;
     justify-content: space-evenly;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .card-list{
