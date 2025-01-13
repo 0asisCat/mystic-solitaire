@@ -47,8 +47,8 @@ Gray empty Card / black border
 
 .card-organized{
     display: flex;
-    justify-content: space-evenly;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    width:680px;
 }
 
 .card-border, .card-unfold{border:1px solid black;}
