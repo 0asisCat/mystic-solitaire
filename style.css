@@ -24,7 +24,7 @@ Gray empty Card / black border
 }
 
 .navBar{
-    background-color: var(--main-bg-color);
+    background-color: var(--main-border-color);
     color: var(--main-text-color);
     padding: 10px;
     text-align: center;
@@ -45,15 +45,26 @@ Gray empty Card / black border
     padding: 10px;
 }
 
+.card-stock-waste{display:flex;justify-content: space-between;width:315px;}
+
 .card-organized{
     display: flex;
     justify-content: space-between;
-    width:680px;
+    width:640px;
 }
 
-.card-border, .card-unfold{border:1px solid black;}
+.card-border{
+    overflow-wrap: wrap
+}
 
-img, .card-border, .card-unfold{
-    width:162px;
-    height:289px;
+.card-border, .card-waste{border:1px dotted var(--main-card-border-color);}
+
+img, .card-border, .card-waste{
+    width:152px;
+    height:225px;
+    border-radius:20px;
+}
+
+.aces, .waste{
+    width:100%;
 }
