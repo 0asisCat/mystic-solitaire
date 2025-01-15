@@ -33,37 +33,58 @@ Gray empty Card / black border
 
 .container{
     display:grid;
-    grid-template-columns: 170px 170px 170px 170px 170px 170px 170px;
-    grid-template-rows: 230px 230px;   
+    grid-template-areas:
+        "header header header header header header header header header"
+        "score-board score-board score-board score-board score-board score-board score-board score-board score-board"
+        ". deck waste . wands coins swords cups .";
+        ;
+    gap:5px;
+    grid-template-columns: repeat(9, 1fr);
 }
 
-.score-board{
-    display:flex;
-    padding: 10px;
-    justify-content: space-evenly;
-    font-size: 1rem;
-}
-
-.card-list{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+.container > div{
     padding: 10px;
 }
 
-.card-stock-waste{display:flex;justify-content: space-between;width:315px;}
-
-.card-organized{
-    display: flex;
-    justify-content: space-between;
-    width:640px;
+.container > div.header{
+    grid-area: header;
+    text-align: center;
+    color:var(--main-text-color);
+    background-color: var(--main-bg-color);
 }
 
-.card-border{
-    overflow-wrap: wrap
+.container > .score-board{
+    grid-area: score-board;
+    text-align: center;
 }
 
-.card-border, .card-waste{border:1px dotted var(--main-card-border-color);}
+.container > .upper{
+    grid-area: upper;
+}
+
+.container > .card-deck{
+    grid-area: deck;
+}
+
+.container > .card-waste{
+    grid-area: waste;
+}
+
+.container > .wands{
+    grid-area: wands;
+}
+
+.container > .coins{
+    grid-area: coins;
+}
+
+.container > .swords{
+    grid-area: swords;
+}
+
+.container > .cups{
+    grid-area: cups;
+}
 
 img, .card-border, .card-waste{
     width:152px;

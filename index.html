@@ -7,50 +7,40 @@
   <title>Mystic Solitaire | Tarot Card Solitaire</title>
 </head>
 <body>
-  <header class="navBar">
-    <h1>Mystic Solitaire</h1>
-  </header>
   <main class="container">
-    <div class="upper">
-      <div class="score-board">
-        <div class="item">
-          <span class="title">Time: </span>
-          <span id="timer"></span>
-        </div>
-        <div class="item">
-          <span class="title">Score: </span>
-          <span id="score"></span>
-        </div>
-        <div class="item">
-          <span class="title">Moves: </span>
-          <span id="move"></span>
-        </div>
-      </div>
-      <div class="card-list">
-        <div class="card-stock-waste">
-          <div class="card-deck">
-            <img src="imgs/cardBack.png" alt="" class="">
-          </div>
-          <div class="card-waste">
-            <img src="imgs/waste.png" alt="" class="waste">
-          </div>
-        </div>
-        <div class="card-organized">
-          <div class="card-border">
-            <img src="imgs/wands.png" alt="wand background" class="aces">
-          </div>
-          <div class="card-border">
-            <img src="imgs/coins.png" alt="coin background" class="aces">
-          </div>
-          <div class="card-border">
-            <img src="imgs/swords.png" alt="sword background" class="aces">
-          </div>
-          <div class="card-border">
-            <img src="imgs/cups.png" alt="cups background" class="aces">
-          </div>
-        </div>
-      </div>
+    <div class="header">
+      <h1>Mystic Solitaire</h1>
     </div>
+    <div class="score-board">
+        <span class="title">Time: </span>
+        <span id="timer"></span>
+        <span class="title">Score: </span>
+        <span id="scores"></span>
+        <span class="title">Moves: </span>
+        <span id="move"></span>
+    </div>
+
+    <div class="card-deck">
+      <img src="imgs/cardBack.png" alt="" class="">
+    </div>
+
+    <div class="card-waste">
+      <img src="imgs/waste.png" alt="" class="waste">
+    </div>
+        
+    <div class="card-border wands">
+      <img src="imgs/wands.png" alt="wand background" class="aces">
+    </div>
+    <div class="card-border coins">
+      <img src="imgs/coins.png" alt="coin background" class="aces">
+    </div>
+    <div class="card-border swords">
+      <img src="imgs/swords.png" alt="sword background" class="aces">
+    </div>
+    <div class="card-border cups">
+      <img src="imgs/cups.png" alt="cups background" class="aces">
+    </div>
+
     <div class="lower">
       <div class="card-set">
         <div class="card-rows"></div>
