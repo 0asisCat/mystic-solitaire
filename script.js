@@ -1,6 +1,22 @@
+// create a function that generate a random pile of cards
+// then this function will be applied one by one to the 7 piles
+// the missing card will be placed in the stock deck
+
+// a function that will update the score board
+    // time: when the game commence the timer will start
+    // score
+    // moves
+
+// research about code animation for the cards
+// enhance the ui design
+
+
 const timer = document.getElementById('timer');
 const scores = document.getElementById('score');
 const moves = document.getElementById('moves');
+let time = 0;
+let score = 0;
+let move = 0;
 
 const suits = {
     wands: [
@@ -68,3 +84,6 @@ const suits = {
         {id:14, imagePath:"imgs/minorArc/hearts/heart14.png"}
     ]
 }
+
+
+const generateRandomPile = () => {};

@@ -36,7 +36,7 @@ Gray empty Card / black border
     grid-template-areas:
         "header header header header header header header header header"
         "score-board score-board score-board score-board score-board score-board score-board score-board score-board"
-        ". deck waste . wands coins swords cups .";
+        ". deck waste . wands coins swords cups ."
         ;
     gap:5px;
     grid-template-columns: repeat(9, 1fr);
@@ -86,7 +86,7 @@ Gray empty Card / black border
     grid-area: cups;
 }
 
-img, .card-border, .card-waste{
+img, .back, .card-border, .card-waste{
     width:152px;
     height:225px;
     border-radius:20px;
@@ -94,4 +94,5 @@ img, .card-border, .card-waste{
 
 .aces, .waste{
     width:100%;
+    border:2px dotted var(--main-card-color);
 }
