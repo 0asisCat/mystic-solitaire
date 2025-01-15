@@ -3,9 +3,15 @@
 // the missing card will be placed in the stock deck
 
 // a function that will update the score board
-    // time: when the game commence the timer will start
-    // score
+    // time: when the game commence the timer will start from 0:00
+        // https://www.youtube.com/watch?v=XWdH4XwrKrM
     // moves
+    // score: 
+        // (1) when paired to consecutive card = 5pts
+        // (2) when put on the foundation 
+        //      ace = 15pts
+        //      2-10 = 20pts
+
 
 // research about code animation for the cards
 // enhance the ui design
