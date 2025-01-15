@@ -31,9 +31,15 @@ Gray empty Card / black border
     font-size: 1.5rem;
 }
 
+.container{
+    display:grid;
+    grid-template-columns: 170px 170px 170px 170px 170px 170px 170px;
+    grid-template-rows: 230px 230px;   
+}
+
 .score-board{
     display:flex;
-    padding: 2%;
+    padding: 10px;
     justify-content: space-evenly;
     font-size: 1rem;
 }
