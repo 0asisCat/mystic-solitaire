@@ -95,4 +95,11 @@ const suits = {
 
 const allCards = [...suits.wands, ...suits.coins, ...suits.swords, ...suits.cups];
 
-const generateRandomPile = () => {};
+
+function renderPile(){
+
+}
+
+function shuffleCards(){
+
+}
