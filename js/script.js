@@ -1,4 +1,5 @@
 // create a function that generate a random pile of cards
+    // https://www.geeksforgeeks.org/javascript-program-to-shuffle-deck-of-cards/
 // then this function will be applied one by one to the 7 piles
 // the missing card will be placed in the stock deck
 // css flip card animation using transform and transition
