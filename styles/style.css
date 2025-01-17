@@ -86,9 +86,13 @@ Gray empty Card / black border
     grid-area: cups;
 }
 
-img, .back, .card-border, .card-waste{
-    width:152px;
-    height:225px;
+.back{
+    width: 132px;
+    height: 225px;}
+
+img, .card-border, .card-waste{
+    width: 152px;
+    height: 225px;
     border-radius:20px;
 }
 
