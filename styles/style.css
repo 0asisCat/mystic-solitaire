@@ -23,6 +23,19 @@ Gray empty Card / black border
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh;
+    background-image: url("../asset/marble-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
 .navBar{
     background-color: var(--main-border-color);
     color: var(--main-text-color);
@@ -37,6 +50,7 @@ Gray empty Card / black border
         "header header header header header header header header header"
         "score-board score-board score-board score-board score-board score-board score-board score-board score-board"
         ". deck waste . wands coins swords cups ."
+        ". pile pile pile pile pile pile pile ."
         ;
     gap:5px;
     grid-template-columns: repeat(9, 1fr);
@@ -86,11 +100,17 @@ Gray empty Card / black border
     grid-area: cups;
 }
 
-.back{
-    width: 132px;
-    height: 225px;}
+.pile{
+    grid-area: pile;
+}
 
-img, .card-border, .card-waste{
+.back{width: 132px;}
+
+.card-stock img{
+    position: absolute;
+}
+
+img, .card-deck, .card-border, .card-waste{
     width: 152px;
     height: 225px;
     border-radius:20px;
