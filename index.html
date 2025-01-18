@@ -8,22 +8,30 @@
 </head>
 <body>
   <div class="bg"></div>
-  <main class="container">
-    <div class="header">
+  <div class="header">
+    <div class="score-board">
+      <span class="title">Time: </span>
+      <span id="timer"></span>
+      <span class="title">Score: </span>
+      <span id="scores"></span>
+      <span class="title">Moves: </span>
+      <span id="move"></span>
+    </div>
+    <div>
       <h1>Mystic Solitaire</h1>
     </div>
-    <div class="score-board">
-        <span class="title">Time: </span>
-        <span id="timer"></span>
-        <span class="title">Score: </span>
-        <span id="scores"></span>
-        <span class="title">Moves: </span>
-        <span id="move"></span>
-    </div>
+    <div class="btns">
+      <button id="new-game">New Game</button>
+      <button id="restart">Restart</button>
+      <button id="hint">Hint</button>
+  </div>
+
+  <main class="container">
 
     <div class="card-deck" id="card-deck">
       <img src="asset/cardBack.png" alt="back of card" class="back">
       <!-- EDIT AND CROP THE FRONT CARD IMAGES -->
+      <!-- LOOK UP CANVAS, sample from freecodecamp -->
     </div>
 
     <div class="card-waste">
