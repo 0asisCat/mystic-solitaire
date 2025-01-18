@@ -16,14 +16,16 @@
 
 
 // research about code animation for the cards flipping
-    // render cards on top of the back card
+    // https://www.youtube.com/watch?v=SgmNxE9lWcY
+
+// render cards on top of the back card
 // enhance the ui design
 
 
 const timer = document.getElementById('timer');
-const scores = document.getElementById('score');
+const scores = document.getElementById('scores');
 const moves = document.getElementById('moves');
-let time = 0;
+let [minutes, seconds] = [0, 0];
 let score = 0;
 let move = 0;
 
