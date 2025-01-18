@@ -1,13 +1,3 @@
-/* DESIGN IDEA
-Name: Mystic Solitaire;
-Color: black, white
-Theme: Minimalistic, ascii art
-
-Dark header
-White background
-Gray empty Card / black border
-*/
-
 :root{
     --main-bg-color: #1c1c1c;
     --main-text-color: #fff;
@@ -33,7 +23,7 @@ Gray empty Card / black border
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    z-index: -1;
+    z-index: -3;
 }
 
 .navBar{
@@ -104,10 +94,19 @@ Gray empty Card / black border
     grid-area: pile;
 }
 
-.back{width: 132px;}
+.back, .front{width: 132px;}
+
+.card-deck .back, .card-deck .front{
+    position: relative;
+    top:0;
+    left:0;
+}
 
 .card-stock img{
     position: absolute;
+    top:0;
+    left:0;
+    z-index:-1;
 }
 
 img, .card-deck, .card-border, .card-waste{

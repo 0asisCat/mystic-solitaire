@@ -98,7 +98,7 @@ const allCards = [...suits.wands, ...suits.coins, ...suits.swords, ...suits.cups
 
 console.log(allCards);
 function renderPile(){
-    const stock = document.getElementById('card-stock');
+    const stock = document.getElementById('card-deck');
     allCards.forEach(card => {
         stock.innerHTML += `<img src="${card.src}" alt="card ${card.id}" id=${card.id}>`;
         }
