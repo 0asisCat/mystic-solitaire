@@ -37,8 +37,6 @@
 .container{
     display:grid;
     grid-template-areas:
-        "header header header header header header header header header"
-        "score-board score-board score-board score-board score-board score-board score-board score-board score-board"
         ". deck waste . wands coins swords cups ."
         ". pile pile pile pile pile pile pile ."
         ;
@@ -46,20 +44,13 @@
     grid-template-columns: repeat(9, 1fr);
 }
 
-.container > div{
-    padding: 10px;
-}
-
-.container > div.header{
-    grid-area: header;
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding:10px;
     text-align: center;
     color:var(--main-text-color);
     background-color: var(--main-bg-color);
-}
-
-.container > .score-board{
-    grid-area: score-board;
-    text-align: center;
 }
 
 .container > .upper{
