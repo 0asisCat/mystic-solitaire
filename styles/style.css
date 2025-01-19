@@ -1,8 +1,8 @@
 :root{
-    --main-bg-color: #1c1c1c;
+    --main-header-color: #1c1c1c;
     --main-text-color: #fff;
     --main-border-color: #000;
-    --main-card-color: #808080;
+    --main-bg-color: #C3C4C9;
     --main-card-border-color: #000;
 }
 
@@ -11,19 +11,6 @@
     padding:0;
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.bg{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw; 
-    height: 100vh;
-    background-image: url("../asset/marble-bg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    z-index: -3;
 }
 
 .navBar{
@@ -35,6 +22,7 @@
 }
 
 .container{
+    background-color: var(--main-bg-color);
     display:grid;
     grid-template-areas:
         ". deck waste . wands coins swords cups ."
@@ -42,6 +30,7 @@
         ;
     gap:5px;
     grid-template-columns: repeat(9, 1fr);
+    padding:10px;
 }
 
 .header{
@@ -50,7 +39,7 @@
     padding:10px;
     text-align: center;
     color:var(--main-text-color);
-    background-color: var(--main-bg-color);
+    background-color: var(--main-header-color);
 }
 
 .score-board{
@@ -113,9 +102,9 @@
     z-index:-1;
 }
 
-img, .card-deck, .card-border, .card-waste{
-    width: 152px;
-    height: 225px;
+img{
+    width: 142px;
+    height: 195px;
     border-radius:20px;
 }
 
