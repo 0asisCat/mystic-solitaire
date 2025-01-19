@@ -53,6 +53,19 @@
     background-color: var(--main-bg-color);
 }
 
+.score-board{
+    width:400px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.3rem;
+}
+
+.btns{
+    display: flex;
+    justify-content: space-evenly;
+    width: 200px;
+}
+
 .container > .upper{
     grid-area: upper;
 }
