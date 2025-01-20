@@ -37,7 +37,15 @@ newGameBtn.addEventListener("click", () => {
     if(int !== null){
         clearInterval(int);
     }
-    int = setInterval(displayTimer)
+    int = setInterval(displayTimer, 10);
+});
+
+restartBtn.addEventListener("click", () => {
+
+});
+
+pauseBtn.addEventListener("click", () => {
+
 });
 
 const suits = {
