@@ -25,11 +25,20 @@
 const timer = document.getElementById('timer-display');
 const scores = document.getElementById('scores-display');
 const moves = document.getElementById('moves-display');
+const newGameBtn = document.getElementById("new-game");
+const restartBtn = document.getElementById("restart");
+const pauseBtn = document.getElementById("pause");
 let [minutes, seconds] = [0, 0];
+let int = null;
 let score = 0;
 let move = 0;
 
-
+newGameBtn.addEventListener("click", () => {
+    if(int !== null){
+        clearInterval(int);
+    }
+    int = setInterval(displayTimer)
+});
 
 const suits = {
     wands: [
