@@ -22,12 +22,14 @@
 // enhance the ui design
 
 
-const timer = document.getElementById('timer');
-const scores = document.getElementById('scores');
-const moves = document.getElementById('moves');
+const timer = document.getElementById('timer-display');
+const scores = document.getElementById('scores-display');
+const moves = document.getElementById('moves-display');
 let [minutes, seconds] = [0, 0];
 let score = 0;
 let move = 0;
+
+
 
 const suits = {
     wands: [
