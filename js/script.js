@@ -22,7 +22,7 @@
 // enhance the ui design
 
 
-const timer = document.getElementById('timer-display');
+const timerDisplay = document.getElementById('timer-display');
 const scores = document.getElementById('scores-display');
 const moves = document.getElementById('moves-display');
 const newGameBtn = document.getElementById("new-game");
@@ -41,11 +41,13 @@ newGameBtn.addEventListener("click", () => {
 });
 
 restartBtn.addEventListener("click", () => {
-
+    clearInterval(int);
+    [minutes, seconds] = [0, 0];
+    timerDisplay.innerHTML = "0 : 00";
 });
 
 pauseBtn.addEventListener("click", () => {
-
+    clearInterval(int);
 });
 
 const suits = {
