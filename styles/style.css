@@ -87,8 +87,6 @@
     grid-area: pile;
 }
 
-.back, .front{width: 132px;}
-
 .card-deck .back{
     position: relative;
     top:0;
@@ -103,8 +101,8 @@
 }
 
 img{
-    width: 142px;
-    height: 195px;
+    width: 10%;
+    height: 10%;
     border-radius:20px;
 }
 

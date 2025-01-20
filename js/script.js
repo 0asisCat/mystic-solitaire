@@ -1,3 +1,9 @@
+/* MAIN TASK:
+- learn using canvas to be able to drag and move cards
+
+
+*/
+
 // create a function that generate a random pile of cards
     // https://www.geeksforgeeks.org/javascript-program-to-shuffle-deck-of-cards/
 // then this function will be applied one by one to the 7 piles
@@ -5,9 +11,7 @@
 // css flip card animation using transform and transition
 
 // a function that will update the score board
-    // time: when the game commence the timer will start from 0:00
-        // https://www.youtube.com/watch?v=XWdH4XwrKrM
-    // moves
+    // time: DONE
     // score: 
         // (1) when paired to consecutive card = 5pts
         // (2) when put on the foundation 
@@ -146,7 +150,7 @@ function renderPile(){
     )
 }
 
-renderPile();
+// renderPile();
 
 function shuffleCards(){
 
