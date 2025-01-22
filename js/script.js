@@ -72,8 +72,9 @@ function displayTimer(){
     timerDisplay.innerHTML = `${m} : ${s}`
 }
 
+
 const suits = {
-    wands: [
+    wands: [    
         {id:1, src:"asset/minorArc/clubs/club01.png"}, 
         {id:2, src:"asset/minorArc/clubs/club02.png"}, 
         {id:3, src:"asset/minorArc/clubs/club03.png"}, 

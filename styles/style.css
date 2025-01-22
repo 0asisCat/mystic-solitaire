@@ -1,3 +1,5 @@
+
+
 :root{
     --main-header-color: #1c1c1c;
     --main-text-color: #fff;
@@ -13,24 +15,16 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+body{
+    background-color: var(--main-bg-color);
+}
+
 .navBar{
     background-color: var(--main-border-color);
     color: var(--main-text-color);
     padding: 10px;
     text-align: center;
     font-size: 1.5rem;
-}
-
-.container{
-    background-color: var(--main-bg-color);
-    display:grid;
-    grid-template-areas:
-        ". deck waste . wands coins swords cups ."
-        ". pile pile pile pile pile pile pile ."
-        ;
-    gap:5px;
-    grid-template-columns: repeat(9, 1fr);
-    padding:10px;
 }
 
 .header{
@@ -55,58 +49,6 @@
     width: 200px;
 }
 
-.container > .upper{
-    grid-area: upper;
-}
-
-.container > .card-deck{
-    grid-area: deck;
-}
-
-.container > .card-waste{
-    grid-area: waste;
-}
-
-.container > .wands{
-    grid-area: wands;
-}
-
-.container > .coins{
-    grid-area: coins;
-}
-
-.container > .swords{
-    grid-area: swords;
-}
-
-.container > .cups{
-    grid-area: cups;
-}
-
-.pile{
-    grid-area: pile;
-}
-
-.card-deck .back{
-    position: relative;
-    top:0;
-    left:0;
-}
-
-.card-stock img{
-    position: absolute;
-    top:0;
-    left:0;
-    z-index:-1;
-}
-
-img{
-    width: 7%;
-    height: 7%;
-    border-radius:20px;
-}
-
-.aces, .waste{
-    width:100%;
-    border:2px dotted var(--main-card-color);
+.container{
+    display:relative;
 }
