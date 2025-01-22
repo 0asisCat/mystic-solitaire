@@ -52,4 +52,9 @@ body{
 
 .container{
     display:relative;
+    border: 1px solid var(--main-border-color);
+    width:70%;
+    height:540px;
+    margin:10px auto;
 }
+
