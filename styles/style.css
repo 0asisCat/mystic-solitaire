@@ -51,10 +51,27 @@ body{
 }
 
 .container{
-    display:relative;
+    position:relative;
     border: 1px solid var(--main-border-color);
     width:70%;
     height:540px;
     margin:10px auto;
 }
 
+.card-deck{
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.card{
+    width: 100px;
+    height: 150px;
+    border: 1px solid var(--main-card-border-color);
+    border-radius: 5px;
+    margin: 10px;
+    color: var(--main-text-color);
+    position:absolute;
+    top:0;
+    left:0;
+}

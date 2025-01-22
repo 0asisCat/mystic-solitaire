@@ -73,6 +73,7 @@ function displayTimer(){
 }
 
 
+
 const suits = {
     wands: [    
         {id:1, src:"asset/minorArc/clubs/club01.png"}, 
@@ -142,16 +143,15 @@ const suits = {
 
 const allCards = [...suits.wands, ...suits.coins, ...suits.swords, ...suits.cups];
 
-console.log(allCards);
 function renderPile(){
     const stock = document.getElementById('card-deck');
     allCards.forEach(card => {
-        stock.innerHTML += `<img src="${card.src}" alt="card ${card.id}" class="front" id=${card.id}>`;
+        stock.innerHTML += `<img src="${card.src}" alt="card ${card.id}" class="card front" id=${card.id}>`;
         }
     )
 }
 
-// renderPile();
+renderPile();
 
 function shuffleCards(){
 
