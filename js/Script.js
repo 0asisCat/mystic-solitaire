@@ -21,7 +21,7 @@ restartBtn.addEventListener("click", () => {
     clearInterval(int);
     [milliseconds, seconds, minutes] = [0, 0, 0];
     timerDisplay.innerHTML = "00 : 00";
-    timerDisplay.style.color = "white";
+    timerDisplay.style.color = "#16F529";
 });
 
 pauseBtn.addEventListener("click", () => {

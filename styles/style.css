@@ -2,9 +2,9 @@
 
 :root{
     --main-header-color: #1c1c1c;
-    --main-text-color: #fff;
+    --main-text-color: #16F529;
     --main-border-color: #000;
-    --main-bg-color: #16F529 /*#C3C4C9*/;
+    --main-bg-color: #000 /*#C3C4C9*/;
     --main-card-border-color: #000;
 }
 
@@ -33,7 +33,6 @@ body{
     padding:10px;
     text-align: center;
     color:var(--main-text-color);
-    background-color: var(--main-header-color);
 }
 
 .score-board{
