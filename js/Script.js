@@ -154,11 +154,11 @@ TODO
 let chosenCard;
 
 function preload(){
-    chosenCard = loadImage(suits.wands[0].src);  // TEST
+    chosenCard = loadImage("./asset/cardBack1.png")//suits.wands[0].src);  // TEST
 }
 
 function setup() {
-    createCanvas(900, 550)
+    createCanvas(900, 600)
     //createDeck();
     //shuffleDeck(allCards);
     //dealCards();
@@ -168,8 +168,11 @@ function draw() {
     background("black")
     fill("black")
     stroke(neonGreen)
-    rect(0,5,900,500)
+    rect(0,5,900,550)
     strokeWeight(5)
+
+    // image
+    image(chosenCard, 70, 50 , 100, 150)
 }
 
 function createDeck() {
