@@ -14,7 +14,7 @@
     font-family: "Jersey 15","Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-body, html{ 
+body:not(.header), html:not(.header){ 
     background-color: var(--main-bg-color); 
     display: grid;
     place-items: center;

@@ -133,8 +133,8 @@ let foundation = [];
 
 /*
 TESTING
-1. load one, two, or three card first
-2. make this card move around when dragged
+1. load one, two, or three card first +
+2. make this card move around when dragged 
 3. when clicked, it flips from front to back
 
 1. render all cards at the stock
@@ -154,7 +154,7 @@ TODO
 let chosenCard;
 
 function preload(){
-    chosenCard = loadImage("./asset/cardBack1.png")//suits.wands[0].src);  // TEST
+    chosenCard = loadImage("./asset/cardBack.png");  // TEST
 }
 
 function setup() {
@@ -166,13 +166,13 @@ function setup() {
 
 function draw() {
     background("black")
-    fill("black")
+    fill(neonGreen) // should be black, neonGreen for beta
     stroke(neonGreen)
     rect(0,5,900,550)
     strokeWeight(5)
 
     // image
-    image(chosenCard, 70, 50 , 100, 150)
+    image(chosenCard, 70, 50 , 90, 140)
 }
 
 function createDeck() {
