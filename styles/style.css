@@ -11,10 +11,12 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Jersey 15","Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 body{ background-color: var(--main-bg-color); }
+
+h1 { font-family: "Workbench", sans-serif;}
 
 .navBar{
     color: var(--main-text-color);
