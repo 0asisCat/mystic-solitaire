@@ -69,40 +69,6 @@ Creating a solitaire game using p5.js is a great project! When it comes to rando
 - **Game State Management**: Keep track of the game state, including the current tableau, stock, waste, and foundation piles. This will help you manage the game flow and implement features like undo and redo.
 - **User Interface**: Use p5.js to create an engaging user interface. You can draw cards, piles, and other UI elements using p5.js's drawing functions.
 
-### Example Structure
-
-Here’s a simple structure to get you started:
-
-```javascript
-let deck = [];
-let tableau = [];
-let stock = [];
-let waste = [];
-let foundation = [];
-
-function setup() {
-    createDeck();
-    shuffleDeck(deck);
-    dealCards();
-}
-
-function createDeck() {
-    // Create a standard 52-card deck
-}
-
-function dealCards() {
-    // Deal cards to tableau, stock, and foundation based on difficulty
-}
-
-function draw() {
-    // Render the game state
-}
-
-function mousePressed() {
-    // Handle card interactions
-}
-```
-
 ### Conclusion
 
 By using the Fisher-Yates shuffle for randomizing the deck and implementing different card arrangements for various difficulty levels, you can create a fun and engaging solitaire game. Make sure to test your game thoroughly to ensure that the rules are followed and that the game is enjoyable at all difficulty levels. Good luck with your project!
