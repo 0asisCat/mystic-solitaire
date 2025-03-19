@@ -1,26 +1,24 @@
 
 
 :root{
-    --main-header-color: #1c1c1c;
     --main-text-color: #16F529;
     --main-border-color: #000;
-    --main-bg-color: #000 /*#C3C4C9*/;
+    --main-bg-color: #000;
     --main-card-border-color: #000;
 }
 
-*{
+* {
     margin:0;
     padding:0;
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-body{
-    background-color: var(--main-bg-color);
-}
+body{ background-color: var(--main-bg-color); }
+
+h1 { text-decoration: underline;}
 
 .navBar{
-    background-color: var(--main-border-color);
     color: var(--main-text-color);
     padding: 10px;
     text-align: center;
@@ -45,13 +43,18 @@ body{
 
 .btns{
     display: flex;
-    justify-content: space-evenly;
     width: 200px;
+    justify-content: space-evenly;
 }
 
-.container{
-    border: 1px solid var(--main-border-color);
-    width:70%;
-    height:540px;
-    margin:10px auto;
+.btns button{
+    padding: 5px 10px;
+    color: var(--main-text-color);
+    border: 2px solid var(--main-text-color);
+    background-color: transparent;
+}
+
+.btns button:active, .btns button:hover{
+    color: var(--main-bg-color);
+    background-color: var(--main-text-color);
 }
