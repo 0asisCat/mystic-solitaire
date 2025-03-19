@@ -168,11 +168,22 @@ function draw() {
     background("black")
     fill(neonGreen) // should be black, neonGreen for beta
     stroke(neonGreen)
-    rect(0,5,900,550)
+    rect(0, 5, 900, 550)
     strokeWeight(5)
 
-    // image
-    image(chosenCard, 70, 50 , 90, 140)
+    // deck
+
+    // waste
+    stroke("black")
+    strokeWeight(2)
+    rect(180, 50, 90, 140)
+
+    // image test
+    image(chosenCard, 70, 50, 90, 140)
+
+    // foundation
+
+    // tableau
 }
 
 function createDeck() {
