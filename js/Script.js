@@ -4,6 +4,8 @@ const moves = document.getElementById('moves-display');
 const newGameBtn = document.getElementById("new-game");
 const restartBtn = document.getElementById("restart");
 const pauseBtn = document.getElementById("pause");
+const neonGreen = "#16F529"
+
 let [milliseconds, seconds, minutes] = [0, 0, 0];
 let int = null;
 let score = 0;
@@ -13,7 +15,7 @@ newGameBtn.addEventListener("click", () => {
     if(int !== null){
         clearInterval(int);
     }
-    timerDisplay.style.color = "#16F529";
+    timerDisplay.style.color = neonGreen;
     int = setInterval(displayTimer, 10);
 });
 
@@ -21,7 +23,7 @@ restartBtn.addEventListener("click", () => {
     clearInterval(int);
     [milliseconds, seconds, minutes] = [0, 0, 0];
     timerDisplay.innerHTML = "00 : 00";
-    timerDisplay.style.color = "#16F529";
+    timerDisplay.style.color = neonGreen;
 });
 
 pauseBtn.addEventListener("click", () => {
@@ -153,7 +155,7 @@ function setup() {
 
 function draw() {
     // Render the game state
-    background(white)
+    background(neonGreen)
 }
 
 function createDeck() {
