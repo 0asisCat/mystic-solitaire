@@ -14,7 +14,11 @@
     font-family: "Jersey 15","Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-body{ background-color: var(--main-bg-color); }
+body, html{ 
+    background-color: var(--main-bg-color); 
+    display: grid;
+    place-items: center;
+}
 
 h1 { font-family: "Workbench", sans-serif;}
 

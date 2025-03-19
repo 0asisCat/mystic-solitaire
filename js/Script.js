@@ -49,6 +49,14 @@ function displayTimer(){
     timerDisplay.innerHTML = `${m} : ${s}`
 }
 
+function newGameDialog(){
+
+}
+
+function pauseDialog(){
+
+}
+
 // MAIN DECK
 const suits = {
     wands: [
@@ -117,7 +125,6 @@ const suits = {
 };
 
 const allCards = [...suits.wands, ...suits.coins, ...suits.swords, ...suits.cups];
-console.log(allCards)
 
 let tableau = [];
 let stock = [];
@@ -138,6 +145,10 @@ TESTING
 5. should be draggable
 6. can only move to other places when its in correct order
 7. when its aces, can be moved to the foundation
+
+TODO
+- change card images style
+    - origPic -> https://www.resizepixel.com/download -> https://pixelartvillage.com/ -> change into black and neon green
 */
 
 let chosenCard;
@@ -147,15 +158,18 @@ function preload(){
 }
 
 function setup() {
-    createCanvas(600, 600)
+    createCanvas(900, 550)
     //createDeck();
     //shuffleDeck(allCards);
     //dealCards();
 }
 
 function draw() {
-    // Render the game state
-    background(neonGreen)
+    background("black")
+    fill("black")
+    stroke(neonGreen)
+    rect(0,5,900,500)
+    strokeWeight(5)
 }
 
 function createDeck() {
