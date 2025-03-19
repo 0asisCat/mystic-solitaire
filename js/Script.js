@@ -48,10 +48,8 @@ function displayTimer(){
 }
 
 // MAIN DECK
- 
-const deck = {
+const suits = {
     wands: [
-        {id:1, src:"asset/minorArc/clubs/club01.png"}, 
         {id:2, src:"asset/minorArc/clubs/club02.png"}, 
         {id:3, src:"asset/minorArc/clubs/club03.png"}, 
         {id:4, src:"asset/minorArc/clubs/club04.png"}, 
@@ -118,6 +116,7 @@ const deck = {
 
 const allCards = [...suits.wands, ...suits.coins, ...suits.swords, ...suits.cups];
 console.log(allCards)
+
 let tableau = [];
 let stock = [];
 let waste = [];
@@ -142,18 +141,19 @@ TESTING
 let chosenCard;
 
 function preload(){
-    chosenCard = loadImage(deck.wands[0].src);  // TEST
+    chosenCard = loadImage(suits.wands[0].src);  // TEST
 }
 
 function setup() {
     createCanvas(600, 600)
-    createDeck();
-    shuffleDeck(allCards);
-    dealCards();
+    //createDeck();
+    //shuffleDeck(allCards);
+    //dealCards();
 }
 
 function draw() {
     // Render the game state
+    background(white)
 }
 
 function createDeck() {
