@@ -117,32 +117,56 @@ const deck = {
 };
 
 const allCards = [...suits.wands, ...suits.coins, ...suits.swords, ...suits.cups];
-
+console.log(allCards)
 let tableau = [];
 let stock = [];
 let waste = [];
 let foundation = [];
 
-function preload(){
+/*
+TESTING
+1. load one, two, or three card first
+2. make this card move around when dragged
+3. when clicked, it flips from front to back
 
+1. render all cards at the stock
+2. when in stock, should be facing back
+- when clicked it will move in the waste
+3. shuffle cards randomly
+!4. randomly divide cards within the tableau
+5. should be draggable
+6. can only move to other places when its in correct order
+7. when its aces, can be moved to the foundation
+*/
+
+let chosenCard;
+
+function preload(){
+    chosenCard = loadImage(deck.wands[0].src);  // TEST
 }
 
 function setup() {
+    createCanvas(600, 600)
     createDeck();
     shuffleDeck(allCards);
     dealCards();
 }
 
+function draw() {
+    // Render the game state
+}
+
 function createDeck() {
     // Create a standard 52-card deck
+    const stock = document.getElementById('card-deck');
+    allCards.forEach(card => {
+        stock.innerHTML += `<img src="${card.src}" alt="card ${card.id}" class="front" id=${card.id}>`;
+        }
+    )
 }
 
 function dealCards() {
     // Deal cards to tableau, stock, and foundation based on difficulty
-}
-
-function draw() {
-    // Render the game state
 }
 
 function mousePressed() {
