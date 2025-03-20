@@ -4,7 +4,7 @@ const moves = document.getElementById('moves-display');
 const newGameBtn = document.getElementById("new-game");
 const restartBtn = document.getElementById("restart");
 const pauseBtn = document.getElementById("pause");
-const neonGreen = "#16F529"
+const mainColor = "white" /*#16F529 neongreen*/
 
 let [milliseconds, seconds, minutes] = [0, 0, 0];
 let int = null;
@@ -15,7 +15,7 @@ newGameBtn.addEventListener("click", () => {
     if(int !== null){
         clearInterval(int);
     }
-    timerDisplay.style.color = neonGreen;
+    timerDisplay.style.color = mainColor;
     int = setInterval(displayTimer, 10);
 });
 
@@ -23,7 +23,7 @@ restartBtn.addEventListener("click", () => {
     clearInterval(int);
     [milliseconds, seconds, minutes] = [0, 0, 0];
     timerDisplay.innerHTML = "00 : 00";
-    timerDisplay.style.color = neonGreen;
+    timerDisplay.style.color = mainColor;
 });
 
 pauseBtn.addEventListener("click", () => {
@@ -129,7 +129,7 @@ const allCards = [...suits.wands, ...suits.coins, ...suits.swords, ...suits.cups
 let tableau = [];
 let stock = [];
 let waste = [];
-let foundation = [];
+let foundation = [[],[],[],[]];
 
 /*
 TESTING
@@ -152,6 +152,7 @@ TODO
 */
 
 let chosenCard;
+let bg;
 
 function preload(){
     chosenCard = loadImage("./asset/cardBack.png");  // TEST
@@ -166,12 +167,14 @@ function setup() {
 
 function draw() {
     background("black")
-    fill(neonGreen) // should be black, neonGreen for beta
-    stroke(neonGreen)
+    fill(mainColor) // should be black, mainColor for beta
+    stroke(mainColor)
     rect(0, 5, 900, 550)
     strokeWeight(5)
 
+    
     // deck
+
 
     // waste
     stroke("black")
@@ -182,17 +185,19 @@ function draw() {
     image(chosenCard, 70, 50, 90, 140)
 
     // foundation
+    stroke("black")
+    strokeWeight(2)
+    for(let xPos = 0; xPos < 4; xPos++){
+        rect(430 + xPos * 100, 50, 90, 140)
+    }
 
     // tableau
+
 }
 
 function createDeck() {
     // Create a standard 52-card deck
-    const stock = document.getElementById('card-deck');
-    allCards.forEach(card => {
-        stock.innerHTML += `<img src="${card.src}" alt="card ${card.id}" class="front" id=${card.id}>`;
-        }
-    )
+    
 }
 
 function dealCards() {
