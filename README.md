@@ -1,13 +1,15 @@
 # Mystical Solitaire
 A terminal themed solitaire game with a mystical twist. A project for my p5.js study.
 
+_NOTE: Not the final documentation, but rather a messy draft_
+```
 https://www.google.com/logos/fnbx/solitaire/standalone.html 
 rules/inspo: 
   - https://jackofwandstarot.wordpress.com/2017/06/30/playing-tarot-solitaire/
   - https://youtu.be/LYmK23QAFZg
   - https://codepen.io/bfa/pen/ggGYeE
 
-```
+
 clubs = wands (clubs, staves) = fire (passion, creativity) = masculine = aries, leo, sagittarius
 diamonds = pentacles (coins, discs) = earth (material possessions, physicality) = feminine = taurus, virgo, capricorn
 spades = swords = air (clarity, reason) = masculine = gemini, libra, aquarius
