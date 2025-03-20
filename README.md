@@ -14,10 +14,9 @@ clubs = wands (clubs, staves) = fire (passion, creativity) = masculine = aries, 
 diamonds = pentacles (coins, discs) = earth (material possessions, physicality) = feminine = taurus, virgo, capricorn
 spades = swords = air (clarity, reason) = masculine = gemini, libra, aquarius
 hearts = cups (chalices) = water (fluidity, emotions) = feminine = cancer, scorpio, pisces
-```
 
 GAME OPTION: (1) NORMAL SOLITAIRE (2) TAROT SOLITAIRE
-
+```
 
 # Randomizing the Deck
 
