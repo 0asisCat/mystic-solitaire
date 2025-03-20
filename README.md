@@ -1,7 +1,8 @@
 # Mystical Solitaire
 A terminal themed solitaire game with a mystical twist. A project for my p5.js study.
 
-_NOTE: Not the final documentation, but rather a messy draft_
+
+_NOTE: Not the final documentation, but rather a messy draft from researching or AI help_
 ```
 https://www.google.com/logos/fnbx/solitaire/standalone.html 
 rules/inspo: 
