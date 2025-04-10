@@ -59,8 +59,9 @@ function pauseDialog(){
 
 // MAIN DECK
 const suits = {
-    x: 900,
-    y: 500,
+    width: 90,
+    height: 140,
+    cardBack: {src:"./asset/cardBack.png"},
     wands: [
         {id:2, src:"asset/minorArc/clubs/club02.png", isDragging: false, isFlipped: false}, 
         {id:3, src:"asset/minorArc/clubs/club03.png", isDragging: false, isFlipped: false}, 
@@ -136,8 +137,8 @@ let foundation = [[],[],[],[]];
 /*
 TESTING
 1. load one, two, or three card first +
-2. make this card move around when dragged 
-3. when clicked, it flips from front to back
+2. when clicked, it flips from front to back
+3. make this card move around when dragged 
 
 1. render all cards at the stock
 2. when in stock, should be facing back
@@ -153,11 +154,11 @@ TODO
     - origPic -> https://www.resizepixel.com/download -> https://pixelartvillage.com/ -> change into black and neon green
 */
 
-let chosenCard;
-let bg;
-
 function preload(){
-    chosenCard = loadImage("./asset/cardBack.png");  // TEST
+    // cardBack = loadImage("./asset/cardBack.png");
+    for (let i = 0; i < allCards.length; i++) {
+        stock[i] = loadImage(allCards[i].src);
+    }
 }
 
 function setup() {
@@ -179,7 +180,7 @@ function draw() {
     rect(180, 50, 90, 140)
 
     // image test
-    image(chosenCard, 70, 50, 90, 140)
+    // image(cardBack, 70, 50, 90, 140)
 
     // foundation
     stroke("black")
@@ -195,6 +196,10 @@ function draw() {
 function createDeck() {
     // Create a standard 52-card deck
     
+}
+
+function shuffleDeck() {
+    // Deal cards to tableau, stock, and foundation based on difficulty
 }
 
 function dealCards() {
