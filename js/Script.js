@@ -215,11 +215,6 @@ function dealCards() {
 }
 
 function mousePressed(...array) {
-    /*
-    INITIAL from deck:
-    x = 70
-    y = 50
-    */
 
     // deck to waste
     if (mouseX > stock.x && mouseY < stock.x + suits.width && mouseY > stock.y && mouseY < stock.y + suits.height){ 
