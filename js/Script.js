@@ -59,9 +59,11 @@ function pauseDialog(){
 
 // MAIN DECK
 const suits = {
+    x: 70,
+    y: 50,
     width: 90,
     height: 140,
-    cardBack: {src:"./asset/cardBack.png"},
+    cardBack: "./asset/cardBack.png",
     wands: [
         {id:2, src:"asset/minorArc/clubs/club02.png", isDragging: false, isFlipped: false}, 
         {id:3, src:"asset/minorArc/clubs/club03.png", isDragging: false, isFlipped: false}, 
@@ -136,9 +138,9 @@ let foundation = [[],[],[],[]];
 
 /*
 TESTING
-1. load one, two, or three card first +
-2. when clicked, it flips from front to back
-3. make this card move around when dragged 
+1. load all cards: DONE
+2. when clicked, it flips from front to back:
+3. make this card move around when dragged:
 
 1. render all cards at the stock
 2. when in stock, should be facing back
@@ -154,11 +156,14 @@ TODO
     - origPic -> https://www.resizepixel.com/download -> https://pixelartvillage.com/ -> change into black and neon green
 */
 
+let cardBack;
+
 function preload(){
     // cardBack = loadImage("./asset/cardBack.png");
     for (let i = 0; i < allCards.length; i++) {
         stock[i] = loadImage(allCards[i].src);
     }
+    cardBack = loadImage(suits.cardBack)
 }
 
 function setup() {
@@ -173,8 +178,10 @@ function draw() {
     
     // deck
     for (let i = 0; i < stock.length; i++){
-        image(stock[i], 70, 50, suits.width, suits.height);
+        image(stock[i], suits.x, suits.y, suits.width, suits.height);
     }
+
+    image(cardBack, suits.x, suits.y, suits.width, suits.height)
 
     // waste
     stroke("black")
