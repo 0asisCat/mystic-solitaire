@@ -59,8 +59,6 @@ function pauseDialog(){
 
 // MAIN DECK
 const suits = {
-    x: 70,
-    y: 50,
     width: 90,
     height: 140,
     cardBack: "./asset/cardBack.png",
@@ -132,8 +130,8 @@ const suits = {
 const allCards = [...suits.wands, ...suits.coins, ...suits.swords, ...suits.cups];
 
 let tableau = [];
-let stock = [];
-let waste = [];
+let stock = {x: 70, y: 50, cards: []};
+let waste = {x: 180, y: 50, cards: []};
 let foundation = [[],[],[],[]];
 
 /*
@@ -159,24 +157,25 @@ let cardBack;
 
 function preload(){
     for (let i = 0; i < allCards.length; i++) {
-        stock[i] = loadImage(allCards[i].src);
+        stock.cards[i] = loadImage(allCards[i].src);
     }
     cardBack = loadImage(suits.cardBack)
 }
 
 function setup() {
-    createCanvas(900, 550)
-    //createDeck();
-    //shuffleDeck(allCards);
-    //dealCards();
+    createCanvas(900, 550);
+    createDeck();
+    shuffleDeck(allCards);
+    dealCards();
+    mousePressed();
 }
 
 function draw() {
     background(mainColor)
     
     // deck
-    for (let i = 0; i < stock.length; i++){
-        image(stock[i], suits.x, suits.y, suits.width, suits.height);
+    for (let i = 0; i < stock.cards.length; i++){
+        image(stock.cards[i], stock.x, stock.y, suits.width, suits.height);
     }
 
     image(cardBack, suits.x, suits.y, suits.width, suits.height)
@@ -184,10 +183,10 @@ function draw() {
     // waste
     stroke("black")
     strokeWeight(2)
-    rect(180, 50, 90, 140)
-
-    // image test
-    // image(cardBack, 70, 50, 90, 140)
+    rect(waste.x, waste.y, suits.width, suits.height)
+    for (let i = 0; i < waste.length; i++){
+        image(waste[i], suits.x, suits.y, suits.width, suits.height);
+    }
 
     // foundation
     stroke("black")
@@ -204,18 +203,31 @@ function createDeck() {
     // Create a standard 52-card deck
     
 }
-function shuffleDeck() {
-    for (let i = allCards.length - 1; i > 0; i--) {
+function shuffleDeck(deck) {
+    for (let i = deck.length - 1; i > 0; i--) {
              const j = Math.floor(Math.random() * (i + 1));
-             [allCards[i].src, allCards[j].src] = [allCards[j].src, allCards[i].src];
+             [deck[i].src, deck[j].src] = [deck[j].src, deck[i].src];
          }
-    return allCards;
-}
+    return deck;
+}1
 
 function dealCards() {
     // Deal cards to tableau, stock, and foundation based on difficulty
 }
 
-function mousePressed() {
-    // Handle card interactions
+function mousePressed(array) {
+    /*
+    INITIAL from deck:
+    x = 70
+    y = 50
+    */
+
+    // deck to waste
+    if (mouseX > suits.x && mouseY < suits.x + suits.width && mouseY > suits.y && mouseY < suits.y + suits.height){ 
+        // add animation for the flipped card
+        const flippedCard = array.shift();
+        waste.push(flippedCard);
+    } 
+
+    // change cursor into pointer, the `cursor(ARROW)` is not working
 }
