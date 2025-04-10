@@ -180,18 +180,14 @@ function draw() {
     // image(cardBack, stock.x, stock.y, suits.width, suits.height)
 
     // waste
-    stroke("black")
-    strokeWeight(2)
     rect(waste.x, waste.y, suits.width, suits.height)
     for (let i = 0; i < waste.cards.length; i++){
         image(waste.cards[i], waste.x, waste.y, suits.width, suits.height);
     }
 
     // foundation
-    stroke("black")
-    strokeWeight(2)
     for(let xPos = 0; xPos < 4; xPos++){
-        rect(foundation.x + xPos * 100, foundation.y, 90, 140)
+        rect(foundation.x + xPos * 100, foundation.y, 90, 140);
     }
 
     // tableau
@@ -221,10 +217,10 @@ function mousePressed(...array) {
         // add animation: flipping card
         let flippedCard = array.shift();
         waste.cards.push(flippedCard);
-        console.log(waste.cards);
     } 
 
         // change cursor into pointer, the `cursor(ARROW)` is not working
+        console.log(waste.cards);
 }
 
 // CURRENT TODO: DISPLAY WASTE CARD FOR SUCCESSFUL TRANSFER
