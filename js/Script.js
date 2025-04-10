@@ -58,7 +58,7 @@ function pauseDialog(){
 }
 
 // MAIN DECK
-const suits = {
+let suits = {
     width: 90,
     height: 140,
     cardBack: "./asset/cardBack.png",
@@ -165,7 +165,6 @@ function preload(){
 function setup() {
     createCanvas(900, 550);
     createDeck();
-    shuffleDeck(allCards);
     dealCards();
     mousePressed(stock.cards);
 }
@@ -178,7 +177,7 @@ function draw() {
         image(stock.cards[i], stock.x, stock.y, suits.width, suits.height);
     }
 
-    image(cardBack, stock.x, stock.y, suits.width, suits.height)
+    // image(cardBack, stock.x, stock.y, suits.width, suits.height)
 
     // waste
     stroke("black")
@@ -203,10 +202,10 @@ function createDeck() {
     // Create a standard 52-card deck
     
 }
-function shuffleDeck(deck) {
+function shuffleDeck(...deck) {
     for (let i = deck.length - 1; i > 0; i--) {
              const j = Math.floor(Math.random() * (i + 1));
-             [deck[i].src, deck[j].src] = [deck[j].src, deck[i].src];
+             [deck[i], deck[j]] = [deck[j], deck[i]];
          }
     return deck;
 }1
@@ -225,10 +224,12 @@ function mousePressed(...array) {
     // deck to waste
     if (mouseX > stock.x && mouseY < stock.x + suits.width && mouseY > stock.y && mouseY < stock.y + suits.height){ 
         // add animation: flipping card
-        const flippedCard = array.shift();
+        let flippedCard = array.shift();
         waste.cards.push(flippedCard);
         console.log(waste.cards);
     } 
 
         // change cursor into pointer, the `cursor(ARROW)` is not working
 }
+
+// CURRENT TODO: DISPLAY WASTE CARD FOR SUCCESSFUL TRANSFER
