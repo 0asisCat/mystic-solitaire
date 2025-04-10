@@ -199,7 +199,11 @@ function createDeck() {
 }
 
 function shuffleDeck() {
-    // Deal cards to tableau, stock, and foundation based on difficulty
+    for (let i = allCards.length - 1; i > 0; i--) {
+             const j = Math.floor(Math.random() * (i + 1));
+             [allCards[i].src, allCards[j].src] = [allCards[j].src, allCards[i].src];
+         }
+    return deck;
 }
 
 function dealCards() {
