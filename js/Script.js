@@ -4,7 +4,7 @@ const moves = document.getElementById('moves-display');
 const newGameBtn = document.getElementById("new-game");
 const restartBtn = document.getElementById("restart");
 const pauseBtn = document.getElementById("pause");
-const mainColor = "white" /*#16F529 neongreen*/
+const mainColor = "#16F529" /*#16F529 neongreen*/
 
 let [milliseconds, seconds, minutes] = [0, 0, 0];
 let int = null;
@@ -172,7 +172,9 @@ function draw() {
     background(mainColor)
     
     // deck
-
+    for (let i = 0; i < stock.length; i++){
+        image(stock[i], 70, 50, suits.width, suits.height);
+    }
 
     // waste
     stroke("black")
@@ -197,14 +199,15 @@ function createDeck() {
     // Create a standard 52-card deck
     
 }
-
+/*
 function shuffleDeck() {
     for (let i = allCards.length - 1; i > 0; i--) {
              const j = Math.floor(Math.random() * (i + 1));
              [allCards[i].src, allCards[j].src] = [allCards[j].src, allCards[i].src];
          }
-    return deck;
+    return allCards;
 }
+*/
 
 function dealCards() {
     // Deal cards to tableau, stock, and foundation based on difficulty
