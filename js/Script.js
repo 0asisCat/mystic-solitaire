@@ -4,7 +4,7 @@ const moves = document.getElementById('moves-display');
 const newGameBtn = document.getElementById("new-game");
 const restartBtn = document.getElementById("restart");
 const pauseBtn = document.getElementById("pause");
-const mainColor = "#16F529" /*#16F529 neongreen*/
+const mainColor = "#16F529" /*#16F529 (neongreen) or white*/
 
 let [milliseconds, seconds, minutes] = [0, 0, 0];
 let int = null;
@@ -129,10 +129,10 @@ const suits = {
 
 const allCards = [...suits.wands, ...suits.coins, ...suits.swords, ...suits.cups];
 
-let tableau = [];
+let tableau = {cards: []};
 let stock = {x: 70, y: 50, cards: []};
 let waste = {x: 180, y: 50, cards: []};
-let foundation = [[],[],[],[]];
+let foundation = {x: 430, y: 50, cards: [[],[],[],[]]};
 
 /*
 TESTING
@@ -167,7 +167,7 @@ function setup() {
     createDeck();
     shuffleDeck(allCards);
     dealCards();
-    mousePressed();
+    mousePressed(stock.cards);
 }
 
 function draw() {
@@ -178,21 +178,21 @@ function draw() {
         image(stock.cards[i], stock.x, stock.y, suits.width, suits.height);
     }
 
-    image(cardBack, suits.x, suits.y, suits.width, suits.height)
+    image(cardBack, stock.x, stock.y, suits.width, suits.height)
 
     // waste
     stroke("black")
     strokeWeight(2)
     rect(waste.x, waste.y, suits.width, suits.height)
-    for (let i = 0; i < waste.length; i++){
-        image(waste[i], suits.x, suits.y, suits.width, suits.height);
+    for (let i = 0; i < waste.cards.length; i++){
+        image(waste.cards[i], waste.x, waste.y, suits.width, suits.height);
     }
 
     // foundation
     stroke("black")
     strokeWeight(2)
     for(let xPos = 0; xPos < 4; xPos++){
-        rect(430 + xPos * 100, 50, 90, 140)
+        rect(foundation.x + xPos * 100, foundation.y, 90, 140)
     }
 
     // tableau
@@ -215,7 +215,7 @@ function dealCards() {
     // Deal cards to tableau, stock, and foundation based on difficulty
 }
 
-function mousePressed(array) {
+function mousePressed(...array) {
     /*
     INITIAL from deck:
     x = 70
@@ -223,11 +223,12 @@ function mousePressed(array) {
     */
 
     // deck to waste
-    if (mouseX > suits.x && mouseY < suits.x + suits.width && mouseY > suits.y && mouseY < suits.y + suits.height){ 
-        // add animation for the flipped card
+    if (mouseX > stock.x && mouseY < stock.x + suits.width && mouseY > stock.y && mouseY < stock.y + suits.height){ 
+        // add animation: flipping card
         const flippedCard = array.shift();
-        waste.push(flippedCard);
+        waste.cards.push(flippedCard);
+        console.log(waste.cards);
     } 
 
-    // change cursor into pointer, the `cursor(ARROW)` is not working
+        // change cursor into pointer, the `cursor(ARROW)` is not working
 }
