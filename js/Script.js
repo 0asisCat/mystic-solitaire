@@ -59,6 +59,8 @@ function pauseDialog(){
 
 // MAIN DECK
 const suits = {
+    x: 900,
+    y: 500,
     wands: [
         {id:2, src:"asset/minorArc/clubs/club02.png", isDragging: false}, 
         {id:3, src:"asset/minorArc/clubs/club03.png", isDragging: false}, 
@@ -159,19 +161,14 @@ function preload(){
 }
 
 function setup() {
-    createCanvas(900, 600)
+    createCanvas(900, 550)
     //createDeck();
     //shuffleDeck(allCards);
     //dealCards();
 }
 
 function draw() {
-    background("black")
-    fill(mainColor) // should be black, mainColor for beta
-    stroke(mainColor)
-    rect(0, 5, 900, 550)
-    strokeWeight(5)
-
+    background(mainColor)
     
     // deck
 
