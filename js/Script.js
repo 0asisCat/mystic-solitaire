@@ -141,15 +141,14 @@ TESTING
 1. load all cards: DONE
 2. when clicked, it flips from front to back:
 3. make this card move around when dragged:
+4. find a way to make the card move and stay within a pack if it is in the correct order
 
-1. render all cards at the stock
-2. when in stock, should be facing back
-- when clicked it will move in the waste
-3. shuffle cards randomly
-!4. randomly divide cards within the tableau
-5. should be draggable
-6. can only move to other places when its in correct order
-7. when its aces, can be moved to the foundation
+FOR STOCK/DECK:
+- when the deck is clicked, allCards array will use shuffleCards() 
+- for animation purposes, it will first do the flip or move animation then it will be removed from the stock array and added to the array according to it's placement.
+
+FOR TABLUE:
+to each column, a random number will be generated how any cards it will fill
 
 TODO
 - change card images style
@@ -159,7 +158,6 @@ TODO
 let cardBack;
 
 function preload(){
-    // cardBack = loadImage("./asset/cardBack.png");
     for (let i = 0; i < allCards.length; i++) {
         stock[i] = loadImage(allCards[i].src);
     }
@@ -206,7 +204,6 @@ function createDeck() {
     // Create a standard 52-card deck
     
 }
-/*
 function shuffleDeck() {
     for (let i = allCards.length - 1; i > 0; i--) {
              const j = Math.floor(Math.random() * (i + 1));
@@ -214,7 +211,6 @@ function shuffleDeck() {
          }
     return allCards;
 }
-*/
 
 function dealCards() {
     // Deal cards to tableau, stock, and foundation based on difficulty
