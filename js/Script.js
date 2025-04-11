@@ -164,19 +164,20 @@ function preload(){
 
 function setup() {
     createCanvas(900, 550);
+
     createDeck();
     dealCards();
-    mousePressed(stock.cards);
+    mousePressed(...stock.cards);
 }
 
 function draw() {
     background(mainColor)
     
     // deck
+    rect(stock.x, stock.y, suits.width, suits.height)
     for (let i = 0; i < stock.cards.length; i++){
         image(stock.cards[i], stock.x, stock.y, suits.width, suits.height);
     }
-
     // image(cardBack, stock.x, stock.y, suits.width, suits.height)
 
     // waste
@@ -210,17 +211,18 @@ function dealCards() {
     // Deal cards to tableau, stock, and foundation based on difficulty
 }
 
-function mousePressed(...array) {
-
+function mousePressed() {
+   
     // deck to waste
-    if (mouseX > stock.x && mouseY < stock.x + suits.width && mouseY > stock.y && mouseY < stock.y + suits.height){ 
+    if (mouseX > stock.x && mouseX < stock.x + suits.width && mouseY > stock.y && mouseY < stock.y + suits.height){ 
         // add animation: flipping card
-        let flippedCard = array.shift();
-        waste.cards.push(flippedCard);
+        
+        if(stock.cards.length > 0){
+            let flippedCard = stock.cards.shift();
+            waste.cards.push(flippedCard);
+        }
     } 
 
         // change cursor into pointer, the `cursor(ARROW)` is not working
-        console.log(waste.cards);
+    
 }
-
-// CURRENT TODO: DISPLAY WASTE CARD FOR SUCCESSFUL TRANSFER
