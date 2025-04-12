@@ -64,6 +64,7 @@ let suits = {
     height: 140,
     cardBack: "./asset/cardBack.png",
     wands: [
+        {id:1, src:"asset/minorArc/clubs/club01.png", isDragging: false, isFlipped: false}, 
         {id:2, src:"asset/minorArc/clubs/club02.png", isDragging: false, isFlipped: false}, 
         {id:3, src:"asset/minorArc/clubs/club03.png", isDragging: false, isFlipped: false}, 
         {id:4, src:"asset/minorArc/clubs/club04.png", isDragging: false, isFlipped: false}, 
@@ -220,7 +221,7 @@ function mousePressed() {
    
     // deck to waste
     if (mouseX > stock.x && mouseX < stock.x + suits.width && mouseY > stock.y && mouseY < stock.y + suits.height){ 
-        // add animation: flipping card
+        // add animation: flipping card https://editor.p5js.org/cmswans/sketches/dDDBmETAP
         
         if(stock.cards.length > 0){
             let flippedCard = stock.cards.shift();
