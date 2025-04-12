@@ -60,8 +60,8 @@ function pauseDialog(){
 
 // MAIN DECK
 let suits = {
-    width: 90,
-    height: 140,
+    width: 100,
+    height: 150,
     cardBack: "./asset/cardBack.png",
     wands: [
         {id:1, src:"asset/minorArc/clubs/club01.png", isDragging: false, isFlipped: false}, 
@@ -131,10 +131,10 @@ let suits = {
 
 const allCards = [...suits.wands, ...suits.coins, ...suits.swords, ...suits.cups];
 
-let tableau = {x: 50, y: 230, cards: []};
+let tableau = {x: 15, y: 230, cards: []};
 let stock = {x: 70, y: 50, cards: []};
 let waste = {x: 180, y: 50, cards: []};
-let foundation = {x: 430, y: 50, cards: [[],[],[],[]]};
+let foundation = {x: 400, y: 50, cards: [[],[],[],[]]};
 
 /*
 TESTING
@@ -190,12 +190,12 @@ function draw() {
 
     // tableau
     for (let xPos = 0; xPos < 8; xPos++){
-        rect(tableau.x + xPos * 100, tableau.y, suits.width, suits.height);
+        rect(tableau.x + xPos * 110, tableau.y, suits.width, suits.height);
     }
     
     // foundation
     for(let xPos = 0; xPos < 4; xPos++){
-        rect(foundation.x + xPos * 100, foundation.y, suits.width, suits.height);
+        rect(foundation.x + xPos * 110, foundation.y, suits.width, suits.height);
     }
     
 }
