@@ -60,8 +60,8 @@ function pauseDialog(){
 
 // MAIN DECK
 let suits = {
-    width: 100,
-    height: 150,
+    width: 110,
+    height: 160,
     cardBack: "./asset/cardBack.png",
     wands: [
         {id:1, src:"asset/minorArc/clubs/club01.png", isDragging: false, isFlipped: false}, 
@@ -133,7 +133,7 @@ const allCards = [...suits.wands, ...suits.coins, ...suits.swords, ...suits.cups
 
 let tableau = {x: 15, y: 230, cards: []};
 let stock = {x: 70, y: 50, cards: []};
-let waste = {x: 180, y: 50, cards: []};
+let waste = {x: 190, y: 50, cards: []};
 let foundation = {x: 400, y: 50, cards: [[],[],[],[]]};
 
 /*
@@ -165,7 +165,7 @@ function preload(){
 }
 
 function setup() {
-    createCanvas(900, 550);
+    createCanvas(1000, 650);
 
     createDeck();
     dealCards();
@@ -179,6 +179,8 @@ function draw() {
     rect(stock.x, stock.y, suits.width, suits.height)
     for (let i = 0; i < stock.cards.length; i++){
         image(stock.cards[i], stock.x, stock.y, suits.width, suits.height);
+        // strokeWeight(2);
+        // stroke(0);
     }
     image(cardBack, stock.x, stock.y, suits.width, suits.height)
 
@@ -190,12 +192,12 @@ function draw() {
 
     // tableau
     for (let xPos = 0; xPos < 8; xPos++){
-        rect(tableau.x + xPos * 110, tableau.y, suits.width, suits.height);
+        rect(tableau.x + xPos * 123, tableau.y, suits.width, suits.height);
     }
     
     // foundation
     for(let xPos = 0; xPos < 4; xPos++){
-        rect(foundation.x + xPos * 110, foundation.y, suits.width, suits.height);
+        rect(foundation.x + xPos * 123, foundation.y, suits.width, suits.height);
     }
     
 }
