@@ -4,7 +4,7 @@ const moves = document.getElementById('moves-display');
 const newGameBtn = document.getElementById("new-game");
 const restartBtn = document.getElementById("restart");
 const pauseBtn = document.getElementById("pause");
-const mainColor = "#16F529" /*#16F529 (neongreen) or white*/
+const mainColor = "white" /*#16F529 (neongreen) or white*/
 
 let [milliseconds, seconds, minutes] = [0, 0, 0];
 let int = null;
@@ -31,6 +31,7 @@ pauseBtn.addEventListener("click", () => {
     timerDisplay.style.color = "red";
 });
 
+// add an undo button
 
 function displayTimer(){
     milliseconds += 10;
@@ -129,7 +130,7 @@ let suits = {
 
 const allCards = [...suits.wands, ...suits.coins, ...suits.swords, ...suits.cups];
 
-let tableau = {cards: []};
+let tableau = {x: 50, y: 230, cards: []};
 let stock = {x: 70, y: 50, cards: []};
 let waste = {x: 180, y: 50, cards: []};
 let foundation = {x: 430, y: 50, cards: [[],[],[],[]]};
@@ -137,7 +138,7 @@ let foundation = {x: 430, y: 50, cards: [[],[],[],[]]};
 /*
 TESTING
 1. load all cards: DONE
-2. when clicked, it flips from front to back:
+2. when clicked, it flips to waste: DONE
 3. make this card move around when dragged:
 4. find a way to make the card move and stay within a pack if it is in the correct order
 
@@ -178,7 +179,7 @@ function draw() {
     for (let i = 0; i < stock.cards.length; i++){
         image(stock.cards[i], stock.x, stock.y, suits.width, suits.height);
     }
-    // image(cardBack, stock.x, stock.y, suits.width, suits.height)
+    image(cardBack, stock.x, stock.y, suits.width, suits.height)
 
     // waste
     rect(waste.x, waste.y, suits.width, suits.height)
@@ -186,12 +187,15 @@ function draw() {
         image(waste.cards[i], waste.x, waste.y, suits.width, suits.height);
     }
 
+    // tableau
+    for (let xPos = 0; xPos < 8; xPos++){
+        rect(tableau.x + xPos * 100, tableau.y, suits.width, suits.height);
+    }
+    
     // foundation
     for(let xPos = 0; xPos < 4; xPos++){
-        rect(foundation.x + xPos * 100, foundation.y, 90, 140);
+        rect(foundation.x + xPos * 100, foundation.y, suits.width, suits.height);
     }
-
-    // tableau
     
 }
 
@@ -199,6 +203,7 @@ function createDeck() {
     // Create a standard 52-card deck
     
 }
+
 function shuffleDeck(...deck) {
     for (let i = deck.length - 1; i > 0; i--) {
              const j = Math.floor(Math.random() * (i + 1));
