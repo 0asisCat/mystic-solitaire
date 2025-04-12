@@ -224,6 +224,7 @@ function mousePressed() {
     // deck to waste
     if (mouseX > stock.x && mouseX < stock.x + suits.width && mouseY > stock.y && mouseY < stock.y + suits.height){ 
         // add animation: flipping card https://editor.p5js.org/cmswans/sketches/dDDBmETAP
+        // ig you'll add delay before shift()
         
         if(stock.cards.length > 0){
             let flippedCard = stock.cards.shift();
