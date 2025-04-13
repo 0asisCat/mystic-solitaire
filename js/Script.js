@@ -64,68 +64,68 @@ let suits = {
     height: 160,
     cardBack: "./asset/cardBack.png",
     wands: [
-        {id:1, src:"asset/minorArc/clubs/club01.png", isDragging: false, isFlipped: false}, 
-        {id:2, src:"asset/minorArc/clubs/club02.png", isDragging: false, isFlipped: false}, 
-        {id:3, src:"asset/minorArc/clubs/club03.png", isDragging: false, isFlipped: false}, 
-        {id:4, src:"asset/minorArc/clubs/club04.png", isDragging: false, isFlipped: false}, 
-        {id:5, src:"asset/minorArc/clubs/club05.png", isDragging: false, isFlipped: false}, 
-        {id:6, src:"asset/minorArc/clubs/club06.png", isDragging: false, isFlipped: false}, 
-        {id:7, src:"asset/minorArc/clubs/club07.png", isDragging: false, isFlipped: false}, 
-        {id:8, src:"asset/minorArc/clubs/club08.png", isDragging: false, isFlipped: false}, 
-        {id:9, src:"asset/minorArc/clubs/club09.png", isDragging: false, isFlipped: false}, 
-        {id:10, src:"asset/minorArc/clubs/club10.png", isDragging: false, isFlipped: false}, 
-        {id:11, src:"asset/minorArc/clubs/club11.png", isDragging: false, isFlipped: false}, 
-        {id:12, src:"asset/minorArc/clubs/club12.png", isDragging: false, isFlipped: false}, 
-        {id:13, src:"asset/minorArc/clubs/club13.png", isDragging: false, isFlipped: false},
-        {id:14, src:"asset/minorArc/clubs/club14.png", isDragging: false, isFlipped: false}
+        {id:1, src:"asset/minorArc/clubs/club01.png", isDragging: false}, 
+        {id:2, src:"asset/minorArc/clubs/club02.png", isDragging: false}, 
+        {id:3, src:"asset/minorArc/clubs/club03.png", isDragging: false}, 
+        {id:4, src:"asset/minorArc/clubs/club04.png", isDragging: false}, 
+        {id:5, src:"asset/minorArc/clubs/club05.png", isDragging: false}, 
+        {id:6, src:"asset/minorArc/clubs/club06.png", isDragging: false}, 
+        {id:7, src:"asset/minorArc/clubs/club07.png", isDragging: false}, 
+        {id:8, src:"asset/minorArc/clubs/club08.png", isDragging: false}, 
+        {id:9, src:"asset/minorArc/clubs/club09.png", isDragging: false}, 
+        {id:10, src:"asset/minorArc/clubs/club10.png", isDragging: false}, 
+        {id:11, src:"asset/minorArc/clubs/club11.png", isDragging: false}, 
+        {id:12, src:"asset/minorArc/clubs/club12.png", isDragging: false}, 
+        {id:13, src:"asset/minorArc/clubs/club13.png", isDragging: false},
+        {id:14, src:"asset/minorArc/clubs/club14.png", isDragging: false}
     ],
     coins: [
-        {id:1, src:"asset/minorArc/diamonds/diamond01.png", isDragging: false, isFlipped: false},
-        {id:2, src:"asset/minorArc/diamonds/diamond02.png", isDragging: false, isFlipped: false},
-        {id:3, src:"asset/minorArc/diamonds/diamond03.png", isDragging: false, isFlipped: false},
-        {id:4, src:"asset/minorArc/diamonds/diamond04.png", isDragging: false, isFlipped: false},
-        {id:5, src:"asset/minorArc/diamonds/diamond05.png", isDragging: false, isFlipped: false},
-        {id:6, src:"asset/minorArc/diamonds/diamond06.png", isDragging: false, isFlipped: false},
-        {id:7, src:"asset/minorArc/diamonds/diamond07.png", isDragging: false, isFlipped: false},
-        {id:8, src:"asset/minorArc/diamonds/diamond08.png", isDragging: false, isFlipped: false},
-        {id:9, src:"asset/minorArc/diamonds/diamond09.png", isDragging: false, isFlipped: false},
-        {id:10, src:"asset/minorArc/diamonds/diamond10.png", isDragging: false, isFlipped: false},
-        {id:11, src:"asset/minorArc/diamonds/diamond11.png", isDragging: false, isFlipped: false},
-        {id:12, src:"asset/minorArc/diamonds/diamond12.png", isDragging: false, isFlipped: false},
-        {id:13, src:"asset/minorArc/diamonds/diamond13.png", isDragging: false, isFlipped: false},
-        {id:14, src:"asset/minorArc/diamonds/diamond14.png", isDragging: false, isFlipped: false}
+        {id:1, src:"asset/minorArc/diamonds/diamond01.png", isDragging: false},
+        {id:2, src:"asset/minorArc/diamonds/diamond02.png", isDragging: false},
+        {id:3, src:"asset/minorArc/diamonds/diamond03.png", isDragging: false},
+        {id:4, src:"asset/minorArc/diamonds/diamond04.png", isDragging: false},
+        {id:5, src:"asset/minorArc/diamonds/diamond05.png", isDragging: false},
+        {id:6, src:"asset/minorArc/diamonds/diamond06.png", isDragging: false},
+        {id:7, src:"asset/minorArc/diamonds/diamond07.png", isDragging: false},
+        {id:8, src:"asset/minorArc/diamonds/diamond08.png", isDragging: false},
+        {id:9, src:"asset/minorArc/diamonds/diamond09.png", isDragging: false},
+        {id:10, src:"asset/minorArc/diamonds/diamond10.png", isDragging: false},
+        {id:11, src:"asset/minorArc/diamonds/diamond11.png", isDragging: false},
+        {id:12, src:"asset/minorArc/diamonds/diamond12.png", isDragging: false},
+        {id:13, src:"asset/minorArc/diamonds/diamond13.png", isDragging: false},
+        {id:14, src:"asset/minorArc/diamonds/diamond14.png", isDragging: false}
     ],
     swords: [
-        {id:1, src:"asset/minorArc/spades/spade01.png", isDragging: false, isFlipped: false},
-        {id:2, src:"asset/minorArc/spades/spade02.png", isDragging: false, isFlipped: false},
-        {id:3, src:"asset/minorArc/spades/spade03.png", isDragging: false, isFlipped: false},
-        {id:4, src:"asset/minorArc/spades/spade04.png", isDragging: false, isFlipped: false},
-        {id:5, src:"asset/minorArc/spades/spade05.png", isDragging: false, isFlipped: false},
-        {id:6, src:"asset/minorArc/spades/spade06.png", isDragging: false, isFlipped: false},
-        {id:7, src:"asset/minorArc/spades/spade07.png", isDragging: false, isFlipped: false},
-        {id:8, src:"asset/minorArc/spades/spade08.png", isDragging: false, isFlipped: false},
-        {id:9, src:"asset/minorArc/spades/spade09.png", isDragging: false, isFlipped: false},
-        {id:10, src:"asset/minorArc/spades/spade10.png", isDragging: false, isFlipped: false},
-        {id:11, src:"asset/minorArc/spades/spade11.png", isDragging: false, isFlipped: false},
-        {id:12, src:"asset/minorArc/spades/spade12.png", isDragging: false, isFlipped: false},
-        {id:13, src:"asset/minorArc/spades/spade13.png", isDragging: false, isFlipped: false},
-        {id:14, src:"asset/minorArc/spades/spade14.png", isDragging: false, isFlipped: false}
+        {id:1, src:"asset/minorArc/spades/spade01.png", isDragging: false},
+        {id:2, src:"asset/minorArc/spades/spade02.png", isDragging: false},
+        {id:3, src:"asset/minorArc/spades/spade03.png", isDragging: false},
+        {id:4, src:"asset/minorArc/spades/spade04.png", isDragging: false},
+        {id:5, src:"asset/minorArc/spades/spade05.png", isDragging: false},
+        {id:6, src:"asset/minorArc/spades/spade06.png", isDragging: false},
+        {id:7, src:"asset/minorArc/spades/spade07.png", isDragging: false},
+        {id:8, src:"asset/minorArc/spades/spade08.png", isDragging: false},
+        {id:9, src:"asset/minorArc/spades/spade09.png", isDragging: false},
+        {id:10, src:"asset/minorArc/spades/spade10.png", isDragging: false},
+        {id:11, src:"asset/minorArc/spades/spade11.png", isDragging: false},
+        {id:12, src:"asset/minorArc/spades/spade12.png", isDragging: false},
+        {id:13, src:"asset/minorArc/spades/spade13.png", isDragging: false},
+        {id:14, src:"asset/minorArc/spades/spade14.png", isDragging: false}
     ],
     cups: [
-        {id:1, src:"asset/minorArc/hearts/heart01.png", isDragging: false, isFlipped: false},
-        {id:2, src:"asset/minorArc/hearts/heart02.png", isDragging: false, isFlipped: false},
-        {id:3, src:"asset/minorArc/hearts/heart03.png", isDragging: false, isFlipped: false},
-        {id:4, src:"asset/minorArc/hearts/heart04.png", isDragging: false, isFlipped: false},
-        {id:5, src:"asset/minorArc/hearts/heart05.png", isDragging: false, isFlipped: false},
-        {id:6, src:"asset/minorArc/hearts/heart06.png", isDragging: false, isFlipped: false},
-        {id:7, src:"asset/minorArc/hearts/heart07.png", isDragging: false, isFlipped: false},
-        {id:8, src:"asset/minorArc/hearts/heart08.png", isDragging: false, isFlipped: false},
-        {id:9, src:"asset/minorArc/hearts/heart09.png", isDragging: false, isFlipped: false},
-        {id:10, src:"asset/minorArc/hearts/heart10.png", isDragging: false, isFlipped: false},
-        {id:11, src:"asset/minorArc/hearts/heart11.png", isDragging: false, isFlipped: false},
-        {id:12, src:"asset/minorArc/hearts/heart12.png", isDragging: false, isFlipped: false},
-        {id:13, src:"asset/minorArc/hearts/heart13.png", isDragging: false, isFlipped: false},
-        {id:14, src:"asset/minorArc/hearts/heart14.png", isDragging: false, isFlipped: false}
+        {id:1, src:"asset/minorArc/hearts/heart01.png", isDragging: false},
+        {id:2, src:"asset/minorArc/hearts/heart02.png", isDragging: false},
+        {id:3, src:"asset/minorArc/hearts/heart03.png", isDragging: false},
+        {id:4, src:"asset/minorArc/hearts/heart04.png", isDragging: false},
+        {id:5, src:"asset/minorArc/hearts/heart05.png", isDragging: false},
+        {id:6, src:"asset/minorArc/hearts/heart06.png", isDragging: false},
+        {id:7, src:"asset/minorArc/hearts/heart07.png", isDragging: false},
+        {id:8, src:"asset/minorArc/hearts/heart08.png", isDragging: false},
+        {id:9, src:"asset/minorArc/hearts/heart09.png", isDragging: false},
+        {id:10, src:"asset/minorArc/hearts/heart10.png", isDragging: false},
+        {id:11, src:"asset/minorArc/hearts/heart11.png", isDragging: false},
+        {id:12, src:"asset/minorArc/hearts/heart12.png", isDragging: false},
+        {id:13, src:"asset/minorArc/hearts/heart13.png", isDragging: false},
+        {id:14, src:"asset/minorArc/hearts/heart14.png", isDragging: false}
     ]
 };
 
@@ -133,15 +133,21 @@ const allCards = [...suits.wands, ...suits.coins, ...suits.swords, ...suits.cups
 
 let tableau = {x: 15, y: 230, cards: []};
 let stock = {x: 70, y: 50, cards: []};
-let waste = {x: 190, y: 50, cards: []};
+let waste = {x: 193, y: 50, cards: []};
 let foundation = {x: 400, y: 50, cards: [[],[],[],[]]};
 
 /*
 TESTING
 1. load all cards: DONE
 2. when clicked, it flips to waste: DONE
-3. make this card move around when dragged:
-4. find a way to make the card move and stay within a pack if it is in the correct order
+3. make the cards draggable:
+    - find a way to make the card move and stay within a pack if it is in the correct order
+4. make the Fisher-Yates Algo work to randomize the deck:
+5. randomly transfer them to the tabluea card array:
+
+!!! CHANGES:
+1. Similar to Solitaire Mobile, teh cards will all start in the bottom part, then it will be randomly transferred to the tableau arrays, with random quantity, the remaining will fall in the deck/stock.
+2. The cards will are animatedly moving.
 
 FOR STOCK/DECK:
 - when the deck is clicked, allCards array will use shuffleCards() 
@@ -156,8 +162,9 @@ TODO
 */
 
 let cardBack;
+let offsetX, offsetY;
 
-function preload(){
+function preload() {
     for (let i = 0; i < allCards.length; i++) {
         stock.cards[i] = loadImage(allCards[i].src);
     }
@@ -199,7 +206,7 @@ function draw() {
     for(let xPos = 0; xPos < 4; xPos++){
         rect(foundation.x + xPos * 123, foundation.y, suits.width, suits.height);
     }
-    
+
 }
 
 function createDeck() {
@@ -223,15 +230,22 @@ function mousePressed() {
    
     // deck to waste
     if (mouseX > stock.x && mouseX < stock.x + suits.width && mouseY > stock.y && mouseY < stock.y + suits.height){ 
+        // change cursor into pointer, the `cursor(ARROW)` is not working
         // add animation: flipping card https://editor.p5js.org/cmswans/sketches/dDDBmETAP
         // ig you'll add delay before shift()
-        
+
         if(stock.cards.length > 0){
             let flippedCard = stock.cards.shift();
             waste.cards.push(flippedCard);
         }
     } 
 
-        // change cursor into pointer, the `cursor(ARROW)` is not working
-    
+    if (mouseX > waste.x && mouseX < waste.x + suits.width && mouseY > waste.y && mouseY < waste.y + suits.height){ 
+        
+    }
+
+}
+
+function mouseReleased() {
+  
 }
