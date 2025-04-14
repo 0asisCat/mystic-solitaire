@@ -62,6 +62,8 @@ function pauseDialog(){
 let suits = {
     width: 110,
     height: 160,
+    x: 500,
+    y: 600,
     cardBack: "./asset/cardBack.png",
     wands: [
         {id:1, src:"asset/minorArc/clubs/club01.png", isDragging: false}, 
@@ -148,6 +150,7 @@ TESTING
 !!! CHANGES:
 1. Similar to Solitaire Mobile, teh cards will all start in the bottom part, then it will be randomly transferred to the tableau arrays, with random quantity, the remaining will fall in the deck/stock.
 2. The cards will are animatedly moving.
+3. use random(min,max) for randome order of cards or placement in tableau?
 
 FOR STOCK/DECK:
 - when the deck is clicked, allCards array will use shuffleCards() 
@@ -160,13 +163,12 @@ TODO
 - change card images style
     - origPic -> https://www.resizepixel.com/download -> https://pixelartvillage.com/ -> change into black and neon green
 */
-
+let cardImg = [];
 let cardBack;
-let offsetX, offsetY;
 
 function preload() {
     for (let i = 0; i < allCards.length; i++) {
-        stock.cards[i] = loadImage(allCards[i].src);
+        cardImg[i] = loadImage(allCards[i].src);
     }
     cardBack = loadImage(suits.cardBack)
 }
@@ -174,25 +176,22 @@ function preload() {
 function setup() {
     createCanvas(1000, 650);
 
-    createDeck();
-    dealCards();
-    mousePressed(...stock.cards);
 }
 
 function draw() {
     background(mainColor)
     
-    // deck
-    rect(stock.x, stock.y, suits.width, suits.height)
-    for (let i = 0; i < stock.cards.length; i++){
-        image(stock.cards[i], stock.x, stock.y, suits.width, suits.height);
-        // strokeWeight(2);
-        // stroke(0);
+    // start
+    rect(suits.x, suits.y, suits.width, suits.height) // base
+    for (let i = 0; i < cardImg.length; i++){
+        image(cardImg[i], suits.x, suits.y, suits.width, suits.height);
     }
+
+    // deck
     image(cardBack, stock.x, stock.y, suits.width, suits.height)
 
     // waste
-    rect(waste.x, waste.y, suits.width, suits.height)
+    rect(waste.x, waste.y, suits.width, suits.height) // base
     for (let i = 0; i < waste.cards.length; i++){
         image(waste.cards[i], waste.x, waste.y, suits.width, suits.height);
     }
@@ -200,12 +199,12 @@ function draw() {
     // tableau
     for (let xPos = 0; xPos < 8; xPos++){
         rect(tableau.x + xPos * 123, tableau.y, suits.width, suits.height);
-    }
+    } // base
     
     // foundation
     for(let xPos = 0; xPos < 4; xPos++){
         rect(foundation.x + xPos * 123, foundation.y, suits.width, suits.height);
-    }
+    } // base
 
 }
 
