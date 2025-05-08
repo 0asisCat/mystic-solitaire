@@ -397,6 +397,7 @@ function mouseClicked() {
   }
 }
 
+// FOR MOBILE
 function touchStarted() {
   mouseClicked();
 }
