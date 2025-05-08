@@ -396,4 +396,8 @@ function mouseClicked() {
     lastDistributionTime = millis();
   }
 }
+
+function touchStarted() {
+  mouseClicked();
+}
 */
